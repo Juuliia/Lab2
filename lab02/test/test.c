@@ -21,8 +21,8 @@ START_TEST(test_get_animal_by_name)
 {
 #define DATA_SIZE 6
 
-	enum animal_type input_data[] = { CAT, DOG, COW, PIG, ANIMAL_TYPE_COUNT, ANIMAL_TYPE_COUNT + 1 };
-	char *expected_values[] = { "Кіт", "Собака", "Корова", "Свиня", "N/A", "N/A" };
+	enum animal_type input_data[] = { HOMO, CAT, DOG, COW, PIG, ANIMAL_TYPE_COUNT, ANIMAL_TYPE_COUNT + 1 };
+	char *expected_values[] = {"Human", "Кіт", "Собака", "Корова", "Свиня", "N/A", "N/A" };
 
 	for (int i = 0; i < DATA_SIZE; i++) {
 		const char *actual_value = get_animal_type_name(input_data[i]);
